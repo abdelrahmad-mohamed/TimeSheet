@@ -1,3 +1,5 @@
+using Microsoft.EntityFrameworkCore;
+
 namespace TimeSheet
 {
     public class Program
@@ -8,6 +10,10 @@ namespace TimeSheet
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+
+            builder.Services.AddDbContext<TimeSheetDbContext>(
+                options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
+                );
 
             var app = builder.Build();
 
