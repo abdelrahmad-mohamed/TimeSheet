@@ -1,3 +1,0 @@
-﻿<Project>
-  <Import Project="..\buildMultiTargeting\GlobalBrands.TimeSheet.PL.props" />
-</Project>
