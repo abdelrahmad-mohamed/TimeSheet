@@ -1,0 +1,36 @@
+# Visual Studio
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Build Folders
+**/bin/
+**/obj/
+
+# Rider
+.idea/
+
+# Resharper
+*.ReSharper
+_ReSharper*/
+*.DotSettings.user
+
+# DotCover
+*.dotCover
+
+# NCrunch
+*.ncrunch*
+.*crunch*.local.xml
+
+# Visual Studio Code
+.vscode/
+
+# NuGet Packages
+*.nupkg
+*.snupkg
+packages/
+
+# Others
+*.log
