@@ -22,8 +22,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
 
             builder.Property(e => e.AzureObjectId).HasColumnName("oid");
 
-            builder.Property(e => e.HireDate)
-       .HasDefaultValueSql("GETDATE()");
+          
 
             builder.HasMany(e => e.Tasks)
                    .WithOne(t => t.Employee)

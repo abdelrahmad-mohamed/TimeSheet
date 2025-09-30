@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -18,21 +19,27 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities
        
         public string Description { get; set; } = null!;
 
-        [Range(1, 24, ErrorMessage = "Salary must be in range (1 -> 24) Hours")]
-        public int NoOfHours { get; set; }
-
         [NotMapped]
-        public DateOnly StartDate { get; set; }
+        public int NoOfHours =>(int)(EndDate -StartDate).TotalHours;
+        
+        public DateTime StartDate { get; set; }
 
-        [NotMapped]
-        public DateOnly EndDate { get; set; }
+       
+        public DateTime EndDate { get; set; }
+
+        
+        public DateTime? CompleteTask { get; set; }
 
         public Status Status { get; set; }
+
+        public Category Category { get; set; }
 
         /*Navigation Property*/
 
         public virtual Employee Employee { get; set; } = null!;
         public virtual Project Project { get; set; } = null!;
+
+
 
         /*Foreign key*/
         public int EmployeeId { get; set; }

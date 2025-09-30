@@ -1,3 +1,9 @@
+using GlobalBrands.TimeSheet.BL.Services.EmployeeService;
+using GlobalBrands.TimeSheet.BL.Services.ProjectService;
+using GlobalBrands.TimeSheet.BL.Services.TaskService;
+using GlobalBrands.TimeSheet.DAL.Persistence.Repositories.EmployeeRepository;
+using GlobalBrands.TimeSheet.DAL.Persistence.Repositories.ProjectRepository;
+using GlobalBrands.TimeSheet.DAL.Persistence.Repositories.TaskRepository;
 using Microsoft.EntityFrameworkCore;
 
 namespace TimeSheet
@@ -14,6 +20,17 @@ namespace TimeSheet
             builder.Services.AddDbContext<TimeSheetDbContext>(
                 options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
                 );
+            /*Register service of Repositories to CLR*/
+            builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
+            builder.Services.AddScoped<ITaskRepository,TaskRepository>();
+            builder.Services.AddScoped<IProjectRepository, ProjectRepository>();
+
+            /*Register service of Services to CLR*/
+            builder.Services.AddScoped<IEmployeeService, EmployeeService>();
+
+            builder.Services.AddScoped<ITaskService, TaskService>();
+
+            builder.Services.AddScoped<IProjectService,ProjectService>();
 
             var app = builder.Build();
 
@@ -34,7 +51,7 @@ namespace TimeSheet
 
             app.MapControllerRoute(
                 name: "default",
-                pattern: "{controller=Home}/{action=Index}/{id?}");
+                pattern: "{controller=Admin}/{action=Index}/{id?}");
 
             app.Run();
         }
