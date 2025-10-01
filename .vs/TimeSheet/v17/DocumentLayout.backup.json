@@ -1,0 +1,331 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Backend Assignments\\TimeSheetAssesment\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\views\\admin\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\wwwroot\\js\\site.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.dal\\persistence\\repositories\\taskrepository\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|solutionrelative:globalbrands.timesheet.dal\\persistence\\repositories\\taskrepository\\taskrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.dal\\common\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|solutionrelative:globalbrands.timesheet.dal\\common\\status.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.bl\\services\\taskservice\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|solutionrelative:globalbrands.timesheet.bl\\services\\taskservice\\taskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.bl\\dtos\\taskdtos\\taskhoursdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|solutionrelative:globalbrands.timesheet.bl\\dtos\\taskdtos\\taskhoursdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.dal\\persistence\\data\\configurations\\taskconfiuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|solutionrelative:globalbrands.timesheet.dal\\persistence\\data\\configurations\\taskconfiuration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\controllers\\admincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\viewmodels\\dashboardviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|d:\\backend assignments\\timesheetassesment\\timesheet\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB104EB1-39AA-4CA8-92BA-79E95E13509F}|TimeSheet\\GlobalBrands.TimeSheet.PL.csproj|solutionrelative:timesheet\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.bl\\services\\taskservice\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|solutionrelative:globalbrands.timesheet.bl\\services\\taskservice\\itaskservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.bl\\dtos\\taskdtos\\tasktrenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BCD714E-0C48-410E-9663-D4F1D6046AD8}|GlobalBrands.TimeSheet.BL\\GlobalBrands.TimeSheet.BL.csproj|solutionrelative:globalbrands.timesheet.bl\\dtos\\taskdtos\\tasktrenddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.dal\\persistence\\data\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|solutionrelative:globalbrands.timesheet.dal\\persistence\\data\\entities\\task.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|d:\\backend assignments\\timesheetassesment\\globalbrands.timesheet.dal\\persistence\\data\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D5C73ADC-A6F3-4ECE-A7DC-36A1F29F1F4B}|GlobalBrands.TimeSheet.DAL\\GlobalBrands.TimeSheet.DAL.csproj|solutionrelative:globalbrands.timesheet.dal\\persistence\\data\\entities\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 389,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 11,
+          "SelectedChildIndex": 14,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "site.js",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
+              "RelativeDocumentMoniker": "TimeSheet\\wwwroot\\js\\site.js",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
+              "RelativeToolTip": "TimeSheet\\wwwroot\\js\\site.js",
+              "ViewState": "AgIAAEAAAAAAAAAAAAAYwFUAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-09-29T20:01:40.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Status.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Common\\Status.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.DAL\\Common\\Status.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Common\\Status.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.DAL\\Common\\Status.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T19:41:28.378Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "EmployeeController.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Controllers\\EmployeeController.cs",
+              "RelativeDocumentMoniker": "TimeSheet\\Controllers\\EmployeeController.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Controllers\\EmployeeController.cs",
+              "RelativeToolTip": "TimeSheet\\Controllers\\EmployeeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:10:00.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "TimeSheet\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "TimeSheet\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T15:17:57.624Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DashboardViewModel.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\ViewModels\\DashboardViewModel.cs",
+              "RelativeDocumentMoniker": "TimeSheet\\ViewModels\\DashboardViewModel.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\ViewModels\\DashboardViewModel.cs",
+              "RelativeToolTip": "TimeSheet\\ViewModels\\DashboardViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:10:50.644Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ITaskService.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\Services\\TaskService\\ITaskService.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.BL\\Services\\TaskService\\ITaskService.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\Services\\TaskService\\ITaskService.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.BL\\Services\\TaskService\\ITaskService.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:06:16.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TaskRepository.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Repositories\\TaskRepository\\TaskRepository.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.DAL\\Persistence\\Repositories\\TaskRepository\\TaskRepository.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Repositories\\TaskRepository\\TaskRepository.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.DAL\\Persistence\\Repositories\\TaskRepository\\TaskRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:04:47.816Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AdminController.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Controllers\\AdminController.cs",
+              "RelativeDocumentMoniker": "TimeSheet\\Controllers\\AdminController.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Controllers\\AdminController.cs",
+              "RelativeToolTip": "TimeSheet\\Controllers\\AdminController.cs",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAABsAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T15:03:08.41Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "TaskService.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\Services\\TaskService\\TaskService.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.BL\\Services\\TaskService\\TaskService.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\Services\\TaskService\\TaskService.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.BL\\Services\\TaskService\\TaskService.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAiwG4AAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:50:35.175Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "TaskTrendDTO.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskTrendDTO.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskTrendDTO.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskTrendDTO.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskTrendDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:49:35.796Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Program.cs",
+              "RelativeDocumentMoniker": "TimeSheet\\Program.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Program.cs",
+              "RelativeToolTip": "TimeSheet\\Program.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAAcwDoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:13:51.734Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "TaskConfiuration.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Configurations\\TaskConfiuration.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Configurations\\TaskConfiuration.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Configurations\\TaskConfiuration.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Configurations\\TaskConfiuration.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAIwBYAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T14:07:15.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "TaskHoursDTO.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskHoursDTO.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskHoursDTO.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskHoursDTO.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.BL\\DTOS\\TaskDTOS\\TaskHoursDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T12:58:41.316Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "TimeSheet\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "TimeSheet\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAQwC4AAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T12:40:54.029Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\Admin\\Index.cshtml",
+              "RelativeDocumentMoniker": "TimeSheet\\Views\\Admin\\Index.cshtml",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\Views\\Admin\\Index.cshtml",
+              "RelativeToolTip": "TimeSheet\\Views\\Admin\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAMBdwAoAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-09-29T12:40:37.11Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Task.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Task.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Task.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Task.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Task.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwB0AAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T11:46:54.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Employee.cs",
+              "RelativeDocumentMoniker": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Employee.cs",
+              "ToolTip": "D:\\Backend Assignments\\TimeSheetAssesment\\GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Employee.cs",
+              "RelativeToolTip": "GlobalBrands.TimeSheet.DAL\\Persistence\\Data\\Entities\\Employee.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAowCEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T11:46:48.095Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -9,7 +9,7 @@ namespace GlobalBrands.TimeSheet.DAL.Common
    
         public enum Status
         {
-            NotStarted=1,
+            Pending=1,
             InProgress=2,
             Completed=3,
         }

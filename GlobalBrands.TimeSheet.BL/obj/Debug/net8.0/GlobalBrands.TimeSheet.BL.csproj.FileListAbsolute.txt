@@ -1,0 +1,16 @@
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\bin\Debug\net8.0\GlobalBrands.TimeSheet.BL.deps.json
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\bin\Debug\net8.0\GlobalBrands.TimeSheet.BL.dll
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\bin\Debug\net8.0\GlobalBrands.TimeSheet.BL.pdb
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\bin\Debug\net8.0\GlobalBrands.TimeSheet.DAL.dll
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\bin\Debug\net8.0\GlobalBrands.TimeSheet.DAL.pdb
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.csproj.AssemblyReference.cache
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.AssemblyInfoInputs.cache
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.AssemblyInfo.cs
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.csproj.CoreCompileInputs.cache
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.sourcelink.json
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBr.1A446849.Up2Date
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.dll
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\refint\GlobalBrands.TimeSheet.BL.dll
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\GlobalBrands.TimeSheet.BL.pdb
+D:\Backend Assignments\TimeSheetAssesment\GlobalBrands.TimeSheet.BL\obj\Debug\net8.0\ref\GlobalBrands.TimeSheet.BL.dll

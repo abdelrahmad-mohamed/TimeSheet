@@ -25,8 +25,6 @@ using Microsoft.EntityFrameworkCore;
                 Email = "Ahmedli@example.com",
                 PhoneNumber = "01012345678",
                 Address = "Cairo, Egypt",
-                DateOfBirth = new DateOnly(1995, 5, 12),
-                Position = "Software Developer",
                 Salary = 15000,
                 AzureObjectId = null
             },
@@ -36,10 +34,7 @@ using Microsoft.EntityFrameworkCore;
                 Name = "Sara Mohamed",
                 Email = "sara.mohamed@example.com",
                 PhoneNumber = "01198765432",
-                Address = "Alexandria, Egypt",
-                DateOfBirth = new DateOnly(1998, 8, 20),
-                Position = "QA Engineer",
-               
+                Address = "Alexandria, Egypt",              
                 Salary = 12000,
                 AzureObjectId = null
             }
@@ -63,20 +58,111 @@ using Microsoft.EntityFrameworkCore;
 
         // Seed Tasks (8 tasks → 4 for each employee across 2 projects)
         modelBuilder.Entity<ETask>().HasData(
-           
-            new ETask { Id = 1, Title = "Design DB", Description = "Create ERD and schema", NoOfHours = 5, Status = Status.InProgress, EmployeeId = 1, ProjectId = 1 },
-            new ETask { Id = 2, Title = "API Setup", Description = "Build initial API endpoints", NoOfHours = 6, Status = Status.InProgress, EmployeeId = 1, ProjectId = 1 },
-           
-            new ETask { Id = 3, Title = "Product Module", Description = "Implement product catalog", NoOfHours = 7, Status = Status.Completed, EmployeeId = 1, ProjectId = 2 },
-            new ETask { Id = 4, Title = "Cart Module", Description = "Implement shopping cart", NoOfHours = 4, Status = Status.NotStarted, EmployeeId = 1, ProjectId = 2 },
-
-           
-            new ETask { Id = 5, Title = "Testing API", Description = "Write unit tests", NoOfHours = 5, Status = Status.InProgress, EmployeeId = 2, ProjectId = 1 },
-            new ETask { Id = 6, Title = "UI Review", Description = "Check frontend components", NoOfHours = 3, Status = Status.Completed, EmployeeId = 2, ProjectId = 1 },
-          
-            new ETask { Id = 7, Title = "Payment Module", Description = "Test payment gateway", NoOfHours = 6, Status = Status.InProgress, EmployeeId = 2, ProjectId = 2 },
-            new ETask { Id = 8, Title = "Bug Report", Description = "Document found issues", NoOfHours = 4, Status = Status.InProgress, EmployeeId = 2, ProjectId = 2 }
-    );
+     new ETask
+     {
+         Id = 1,
+         Title = "Design DB",
+         Description = "Create ERD and schema",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.InProgress,
+         CompleteTask=null,
+         EmployeeId = 1,
+         ProjectId = 1,
+         Category = Category.Research
+     },
+     new ETask
+     {
+         Id = 2,
+         Title = "API Setup",
+         Description = "Build initial API endpoints",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.InProgress,
+         CompleteTask=null,
+         EmployeeId = 1,
+         ProjectId = 1,
+         Category = Category.FeatureDevelopment
+     },
+     new ETask
+     {
+         Id = 3,
+         Title = "Product Module",
+         Description = "Implement product catalog",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.Completed,
+         CompleteTask= new DateTime(2025, 9, 27, 17, 0, 0),
+         EmployeeId = 1,
+         ProjectId = 2,
+         Category = Category.FeatureDevelopment
+     },
+     new ETask
+     {
+         Id = 4,
+         Title = "Cart Module",
+         Description = "Implement shopping cart",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.Pending,
+         CompleteTask=null,
+         EmployeeId = 1,
+         ProjectId = 2,
+         Category = Category.FeatureDevelopment
+     },
+     new ETask
+     {
+         Id = 5,
+         Title = "Testing API",
+         Description = "Write unit tests",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.InProgress,
+         CompleteTask=null,
+         EmployeeId = 2,
+         ProjectId = 1,
+         Category = Category.Testing
+     },
+     new ETask
+     {
+         Id = 6,
+         Title = "UI Review",
+         Description = "Check frontend components",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.Completed,
+         CompleteTask = new DateTime(2025, 9, 29, 18, 0, 0),
+         EmployeeId = 2,
+         ProjectId = 1,
+         Category = Category.Improvement
+     },
+     new ETask
+     {
+         Id = 7,
+         Title = "Payment Module",
+         Description = "Test payment gateway",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         Status = Status.InProgress,
+         CompleteTask = null,
+         EmployeeId = 2,
+         ProjectId = 2,
+         Category = Category.Testing
+     },
+     new ETask
+     {
+         Id = 8,
+         Title = "Bug Report",
+         Description = "Document found issues",
+         StartDate = new DateTime(2025, 9, 27, 9, 0, 0),  // 27-09-2025 at 9:00 AM
+         EndDate = new DateTime(2025, 9, 27, 17, 0, 0),   // 27-09-2025 at 5:00 PM
+         CompleteTask = null,
+         Status = Status.InProgress,
+         EmployeeId = 2,
+         ProjectId = 2,
+         Category = Category.Documentation
+     }
+ );
     }
 
     public DbSet<Employee> Employees { get; set; } = null!;

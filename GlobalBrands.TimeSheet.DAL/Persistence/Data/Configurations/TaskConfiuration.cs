@@ -12,7 +12,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
 {
     internal class TaskConfiuration : IEntityTypeConfiguration<ETask>
     {
-        public void Configure(EntityTypeBuilder<ETask> builder)
+        public void Configure(EntityTypeBuilder<ETask> builder) 
         {
         builder.Property(t => t.Id).IsRequired().HasColumnName("Task Id").UseIdentityColumn(1, 1);
 
@@ -20,11 +20,12 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
 
             builder.Property(t => t.Description).HasColumnName("Task Description").HasColumnType("varchar(max)");
 
-            builder.Property(t => t.NoOfHours).IsRequired().HasColumnName("Number Of Hours");
+            builder.Property(t => t.CompleteTask).HasDefaultValueSql("GetDate()");
 
-            builder.Property(t => t.Status).IsRequired().HasColumnName("Task Status").HasConversion<string>().HasDefaultValue(Status.NotStarted);
+            builder.Property(t => t.Status).IsRequired().HasColumnName("Task Status").HasConversion<string>().HasDefaultValue(Status.Pending);
 
-         
+            builder.Property(t => t.Category).IsRequired().HasColumnName("Task Category").HasConversion<string>();
+
             builder.HasOne(t => t.Employee)
                    .WithMany(e => e.Tasks)
                    .HasForeignKey(t => t.EmployeeId)

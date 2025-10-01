@@ -1,0 +1,49 @@
+﻿@model DashboardViewModel
+@{
+    ViewBag.Title = "Admin Dashboard";
+}
+
+<div class="row">
+    @foreach (var card in Model.DashboardCard)
+    {
+        string cardClass = card.Status.ToString() switch
+        {
+            "InProgress" => "bg-secondary text-white",
+            "Pending" => "bg-danger text-white",
+            "Completed" => "bg-success text-white",
+            _ => "bg-secondary text-white"
+        };
+
+        <div class="col-md-4 mb-4">
+            <div class="card text-center shadow-sm @cardClass rounded-3">
+                <div class="card-body">
+                    <h6 class="card-title fw-bold">@card.Status</h6>
+                    <p class="display-5 fw-semibold">@card.TaskCount</p>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<!-- Charts Section -->
+<div class="mt-4">
+    <h5 class="mb-3 text-center fw-bold"> Hours per Employee</h5>
+    <canvas id="hoursChart" height="120"></canvas>
+
+    <h5 class="mt-5 mb-3 text-center fw-bold"> Daily Completed Tasks</h5>
+    <canvas id="dailyTrendChart" height="120"></canvas>
+</div>
+
+<!-- Pass Data to JS -->
+<script>
+    window.chartData = {
+        hours: {
+            labels: @Html.Raw(Json.Serialize(Model.TaskPerHour.Select(x => x.EmployeeName))),
+            values: @Html.Raw(Json.Serialize(Model.TaskPerHour.Select(x => x.TotalHours)))
+        },
+        dailyTrend: {
+            labels: @Html.Raw(Json.Serialize(Model.TaskDailyTrend.Select(x => x.Date.ToString("yyyy-MM-dd")))),
+            values: @Html.Raw(Json.Serialize(Model.TaskDailyTrend.Select(x => x.CompletedCount)))
+        }
+    };
+</script>
