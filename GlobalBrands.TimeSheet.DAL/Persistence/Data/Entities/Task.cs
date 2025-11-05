@@ -20,8 +20,8 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities
         public string Description { get; set; } = null!;
 
         [NotMapped]
-        public int NoOfHours =>(int)(EndDate -StartDate).TotalHours;
-        
+        public double NoOfHours => (EndDate - StartDate).TotalHours;
+
         public DateTime StartDate { get; set; }
 
        
@@ -32,12 +32,13 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities
 
         public Status Status { get; set; }
 
-        public Category Category { get; set; }
 
         /*Navigation Property*/
 
         public virtual Employee Employee { get; set; } = null!;
         public virtual Project Project { get; set; } = null!;
+
+
 
 
 

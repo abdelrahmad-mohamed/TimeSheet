@@ -10,7 +10,7 @@ namespace GlobalBrands.TimeSheet.BL.DTOS.TaskDTOS
     public class TaskHoursDTO
     {
 
-        public int TotalHours { get; set; }
+        public double TotalHours { get; set; }
 
         public string EmployeeName { get; set; } = null!;
 

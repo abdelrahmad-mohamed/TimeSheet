@@ -20,8 +20,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
 
             builder.Property(e => e.Email).IsRequired().HasColumnType("varchar").HasMaxLength(100).HasColumnName("Employee Email");
 
-            builder.Property(e => e.AzureObjectId).HasColumnName("oid");
-
+        
           
 
             builder.HasMany(e => e.Tasks)

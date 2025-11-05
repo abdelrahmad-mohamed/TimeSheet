@@ -22,9 +22,12 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
 
             builder.Property(t => t.CompleteTask).HasDefaultValueSql("GetDate()");
 
+            builder.Property(t => t.StartDate).HasDefaultValueSql("GetDate()");
+
+
             builder.Property(t => t.Status).IsRequired().HasColumnName("Task Status").HasConversion<string>().HasDefaultValue(Status.Pending);
 
-            builder.Property(t => t.Category).IsRequired().HasColumnName("Task Category").HasConversion<string>();
+      
 
             builder.HasOne(t => t.Employee)
                    .WithMany(e => e.Tasks)
@@ -37,6 +40,10 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Data.Configurations
                 .HasForeignKey(t => t.ProjectId)
                 .OnDelete(DeleteBehavior.Cascade);
 
+
+            builder.HasCheckConstraint("CK_Task_StartBeforeEnd", "[StartDate] < [EndDate]");
+            builder.HasCheckConstraint("CK_Task_StartBeforeNow", "[StartDate] >= GETDATE()");
+            builder.HasCheckConstraint("CK_Task_EndBeforeNow", "[EndDate] > GETDATE()");
 
         }
     }

@@ -17,10 +17,10 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.EmployeeRepository
            return await timeSheetDbContext.Employees.Include(e=>e.Tasks).ThenInclude(e=>e.Project).AsNoTracking().ToListAsync();
         }
 
-        public async Task<Employee?> GetByIdAsync(int id)
+        public async Task<Employee?> GetByIdAsync(string? id)
         {
 
-            return await timeSheetDbContext.Employees.Include(e => e.Tasks).ThenInclude(e => e.Project).AsNoTracking().FirstOrDefaultAsync(e => e.Id==id);
+            return await timeSheetDbContext.Employees.Include(e => e.Tasks).ThenInclude(e => e.Project).AsNoTracking().FirstOrDefaultAsync(e => e.UserId==id);
         }
 
         public async Task<int> AddAsync(Employee employee)
@@ -41,10 +41,18 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.EmployeeRepository
             return await timeSheetDbContext.SaveChangesAsync();
         }
 
-       
 
-       
+        public async Task<IEnumerable<Employee>> GetEmployeesByProjectId(int projectId)
+        {
+            var employees = await timeSheetDbContext.Employees
+                .Include(e => e.Tasks)
+                .Where(e => e.Tasks.Any(t => t.ProjectId == projectId))
+                .ToListAsync();
 
-      
+            return employees;
+        }
+
+
+
     }
 }

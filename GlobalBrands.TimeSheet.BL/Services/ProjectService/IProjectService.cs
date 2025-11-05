@@ -11,7 +11,7 @@ namespace GlobalBrands.TimeSheet.BL.Services.ProjectService
 {
     public interface IProjectService
     {
-        public Task<IEnumerable<Project>> GetAll();
+        public Task<IEnumerable<GetAllProjectsDTO>> GetAll();
 
         public Task<Project?> GetById(int id);
 

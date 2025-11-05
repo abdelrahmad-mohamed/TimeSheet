@@ -14,12 +14,12 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.ProjectRepository
 
         public async Task<IEnumerable<Project>> GetAllAsync()
         {
-            return await timeSheetDbContext.Projects.AsNoTracking().ToListAsync();
+            return await timeSheetDbContext.Projects.Include(t => t.Tasks).ThenInclude(t => t.Employee).AsNoTracking().ToListAsync();
         }
 
         public async Task<Project?> GetByIdAsync(int id)
         {
-            return await timeSheetDbContext.Projects.AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
+            return await timeSheetDbContext.Projects.Include(t=>t.Tasks).ThenInclude(t=>t.Employee).AsNoTracking().FirstOrDefaultAsync(p => p.Id == id);
         }
         public async Task<int> AddAsync(Project project)
         {

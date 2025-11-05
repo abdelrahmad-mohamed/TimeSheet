@@ -10,13 +10,16 @@ namespace GlobalBrands.TimeSheet.BL.DTOS.ProjectDTOS
 {
     public class CreateProjectDTO
     {
+
+        [Required(ErrorMessage ="Entre Project Name")]
         public string Name { get; set; } = null!;
 
         [StringLength(50, ErrorMessage = "Description must be in range (2 => 50) character", MinimumLength = 2)]
         public string Description { get; set; } = null!;
 
-        public DateTime DateTime { get; set; }
+        
+        public DateTime DateTime { get; set; }= DateTime.Now;
 
-      
+
     }
 }

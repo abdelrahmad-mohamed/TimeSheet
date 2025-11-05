@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewData["Title"]</title>
+    <link href="~/lib/fontawesome/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/AuthenticateStyleSheet.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="container">
+        <div class="main">
+            <div class="tabs">
+                <div class="tab @(ViewData["Title"]?.ToString() == "Log in" ? "active" : "")">
+                    <a class="text-decoration-none text-light" asp-action="Login" asp-controller="Account">Login</a>
+                </div>
+                <div class="tab @(ViewData["Title"]?.ToString() == "Register" ? "active" : "")">
+                    <a class="text-decoration-none text-light" asp-action="Index" asp-controller="Account">Register</a>
+                </div>
+            </div>
+
+
+        @RenderBody()
+
+    </div>
+    </div>
+
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/fontawesome/js/all.min.js"></script>
+    <script src="~/js/AuthenticationLayOut.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+
+
+      
+
+        

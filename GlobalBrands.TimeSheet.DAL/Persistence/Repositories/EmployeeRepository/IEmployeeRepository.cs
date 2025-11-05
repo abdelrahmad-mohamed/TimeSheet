@@ -11,7 +11,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.EmployeeRepository
     {
         public Task<IEnumerable<Employee>> GetAllAsync();
 
-        public Task<Employee?> GetByIdAsync(int id);
+        public Task<Employee?> GetByIdAsync(string? id);
 
         public Task<int> AddAsync(Employee employee);
 
@@ -19,7 +19,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.EmployeeRepository
 
         public Task<int> DeleteAsync(Employee employee);
 
-       
+        public Task<IEnumerable<Employee>> GetEmployeesByProjectId(int id);
 
 
 

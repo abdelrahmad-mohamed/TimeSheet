@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using GlobalBrands.TimeSheet.BL.DTOS.EmployeeDTOS;
 using GlobalBrands.TimeSheet.BL.DTOS.ProjectDTOS;
 using GlobalBrands.TimeSheet.BL.DTOS.TaskDTOS;
 using GlobalBrands.TimeSheet.BL.Services.ProjectService;
@@ -19,58 +20,147 @@ namespace GlobalBrands.TimeSheet.BL.Services.TaskService
         private readonly ITaskRepository taskRepository = taskRepository;
         private readonly IEmployeeRepository employeeRepository = employeeRepository;
 
-        public async Task<IEnumerable<ETask>> GetAll()
+        public async Task<IEnumerable<GetAllTaskDTO>> GetAll()
         {
-            return await taskRepository.GetAllAsync();
+            var tasks=await taskRepository.GetAllAsync();
+            var taskEntity = tasks.Select(t => new GetAllTaskDTO()
+            {
+                Id = t.Id,
+                TaskName = t.Title,
+                ProjectName = t.Project.Name,
+                EmployeeName = t.Employee.Name,
+                Hours = t.NoOfHours,
+                Status = t.Status.ToString()
+            }).ToList();
+
+            return taskEntity;
+           
+
+           
         }
 
-        public async Task<ETask?> GetById(int id)
+        public async Task<EmployeeTaskDTO> GetById(int id)
         {
             if (id <= 0)
                 return null;
-            return await taskRepository.GetByIdAsync(id);
-        }
-        public async Task<int> Add(CreateTaskDTO task)
-        {
-            var taskEntity = new ETask()
+            var employeeTask= await taskRepository.GetByIdAsync(id);
+            var taskEntity = new EmployeeTaskDTO
             {
-                Title = task.Title,
-                Description = task.Description,
-                StartDate = task.StartDate,
-                EndDate = task.EndDate
+                Id = employeeTask.Id,
+                TaskName = employeeTask.Title,
+                Description = employeeTask.Description,
+                ProjectName = employeeTask.Project.Name,
+                ProjectId = employeeTask.ProjectId,
+                StartDate = employeeTask.StartDate,
+                EndDate = employeeTask.EndDate,
+                Status = employeeTask.Status.ToString()
             };
-            var result = await taskRepository.AddAsync(taskEntity);
-            return result > 0 ? result : 0;
-
-
+            return taskEntity;
         }
-
-        public async Task<int> Update(UpdateTaskDTO task)
+        public async Task<(bool success,string Message)> Add(EmployeeTaskDTO task)
         {
-            var existingTask = taskRepository.GetByIdAsync(task.Id);
-            if (existingTask == null)
-             return 0;
+
+            var currentTime = DateTime.Now;
+            currentTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, currentTime.Hour, currentTime.Minute, 0);
+
+            if (task.StartDate < currentTime || task.EndDate < currentTime || task.StartDate >= task.EndDate)
+            {
+                string Message = "";
+
+                if (task.StartDate < currentTime)
+                    Message += "Start Date cannot be in the past.\n";
+
+                if (task.EndDate < currentTime)
+                    Message += "End Date cannot be in the past.\n";
+
+                if (task.StartDate >= task.EndDate)
+                    Message += "Start Date must be before End Date.\n";
+
+                return (false, Message);
+            }
+
+
 
             var taskEntity = new ETask()
             {
                 Id = task.Id,
-                Title = task.Title,
+                Title = task.TaskName,
                 Description = task.Description,
-               EndDate=task.EndDate,
-
+                StartDate = task.StartDate,
+                EndDate = task.EndDate,
+                Status = (Status)Enum.Parse(typeof(Status), task.Status),
+                ProjectId = task.ProjectId,
+                EmployeeId = task.EmployeeId
             };
-            var result = await taskRepository.UpdateAsync(taskEntity);
-            return result > 0 ? result : 0;
+            var result = await taskRepository.AddAsync(taskEntity);
+            return result > 0
+                 ? (true, null)
+                : (false, "Failed to add task.");
+
+
         }
 
-        public async Task<int> Delete(ETask task)
+        public async Task<(bool success, string Message)> Update(EmployeeTaskDTO task)
         {
+            
+            var currentTime = DateTime.Now;
+            currentTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, currentTime.Hour, currentTime.Minute, 0);
+
+          
+            if (task.StartDate < currentTime || task.EndDate < currentTime || task.StartDate >= task.EndDate)
+            {
+                string Message = "";
+
+                if (task.StartDate < currentTime)
+                    Message += "Start Date cannot be in the past.\n";
+
+                if (task.EndDate < currentTime)
+                    Message += "End Date cannot be in the past.\n";
+
+                if (task.StartDate >= task.EndDate)
+                    Message += "Start Date must be before End Date.\n";
+
+                return (false, Message);
+            }
+
+           
             var existingTask = await taskRepository.GetByIdAsync(task.Id);
             if (existingTask == null)
-                return 0;
+                return (false, "Task not found.");
+
+            
+            existingTask.Title = task.TaskName;
+            existingTask.Description = task.Description;
+            existingTask.Status = (Status)Enum.Parse(typeof(Status), task.Status);
+
+           
+            existingTask.EndDate = task.EndDate;
+
+           
+            var result = await taskRepository.UpdateAsync(existingTask);
+
+            return result > 0
+                ? (true, "Task updated successfully.")
+                : (false, "Failed to update task.");
+        }
+
+        public async Task<int> Delete(EmployeeTaskDTO task)
+        {
+
+            var TaskEmployeeDTO = new ETask()
+            {
+                Id=task.Id,
+                Title = task.TaskName,
+                Description = task.Description,
+                ProjectId = task.ProjectId,
+                StartDate = task.StartDate,
+                EndDate = task.EndDate,
+                Status = (Status)Enum.Parse(typeof(Status), task.Status)
+
+            };
 
 
-            var result = await taskRepository.DeleteAsync(existingTask);
+            var result = await taskRepository.DeleteAsync(TaskEmployeeDTO);
             return result > 0 ? result : 0;
         }
 
@@ -116,6 +206,13 @@ namespace GlobalBrands.TimeSheet.BL.Services.TaskService
                                  .ToList();
             return dailyTrend;
 
+        }
+
+        public async Task<IEnumerable<ETask>> GetTasksByProjectId(int id) { 
+        var tasks = await taskRepository.GetTasksByProjectId(id);
+            if(tasks==null)
+                return Enumerable.Empty<ETask>();
+            return tasks;
         }
     }
 }

@@ -1,0 +1,47 @@
+﻿@model IEnumerable<GetAllTaskDTO>
+@{
+    ViewBag.Title = "Task List";
+}
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="fs-3 fw-bold text-primary text-capitalize">📋 Task List</h2>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle text-center shadow-sm">
+        <thead class="table-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(t => t.TaskName)</th>
+                <th>@Html.DisplayNameFor(t => t.EmployeeName)</th>
+                <th>@Html.DisplayNameFor(t => t.ProjectName)</th>
+                <th>@Html.DisplayNameFor(t => t.Hours)</th>
+                <th>@Html.DisplayNameFor(t => t.Status)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var task in Model)
+            {
+                var statusbg = task.Status.ToString() switch
+                {
+                    "InProgress" => "bg-secondary text-white",
+                    "Pending" => "bg-danger text-white",
+                    "Completed" => "bg-success text-white",
+                    _ => "bg-secondary text-white"
+                };
+
+                <tr>
+                    <td class="fw-semibold">@task.TaskName</td>
+                    <td>@task.EmployeeName</td>
+                    <td>@task.ProjectName</td>
+                    <td>@task.Hours</td>
+                    <td>
+                        <span class="badge rounded-pill px-3 py-2 @statusbg">
+                            @task.Status
+                        </span>
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

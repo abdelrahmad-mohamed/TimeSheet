@@ -1,4 +1,13 @@
-﻿document.addEventListener("DOMContentLoaded", function () {
+﻿$(document).ready(function () {
+    var toastElement = $('#myToast');
+    toastElement.toast('show'); // Show toast automatically
+    setTimeout(function () {
+        toastElement.fadeOut(); // Hide the toast after 5 seconds
+    }, 5000);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
     if (window.chartData) {
         // ================= BAR CHART =================
         var ctx1 = document.getElementById('hoursChart').getContext('2d');

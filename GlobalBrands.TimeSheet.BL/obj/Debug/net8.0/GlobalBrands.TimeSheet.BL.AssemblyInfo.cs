@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GlobalBrands.TimeSheet.BL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+290d206208909008839fcc048480bd48cf152e9e")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ce2a469e852d2a926a4d7cc6f5fb979552311ac0")]
 [assembly: System.Reflection.AssemblyProductAttribute("GlobalBrands.TimeSheet.BL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GlobalBrands.TimeSheet.BL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

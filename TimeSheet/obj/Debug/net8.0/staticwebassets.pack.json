@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\GlobalBrands.TimeSheet.PL.nqnnlm5o2e.bundle.scp.css"
     },
     {
+      "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AccessDenied.css",
+      "PackagePath": "staticwebassets\\css\\AccessDenied.css"
+    },
+    {
+      "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AuthenticateStyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\AuthenticateStyleSheet.css"
+    },
+    {
       "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\AuthenticationLayOut.js",
+      "PackagePath": "staticwebassets\\js\\AuthenticationLayOut.js"
     },
     {
       "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
@@ -195,6 +207,14 @@
     {
       "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\css\\all.min.css",
+      "PackagePath": "staticwebassets\\lib\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\js\\all.min.js",
+      "PackagePath": "staticwebassets\\lib\\fontawesome\\js\\all.min.js"
     },
     {
       "Id": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",

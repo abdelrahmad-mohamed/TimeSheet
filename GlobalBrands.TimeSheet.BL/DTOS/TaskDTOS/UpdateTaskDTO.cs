@@ -23,11 +23,5 @@ namespace GlobalBrands.TimeSheet.BL.DTOS.TaskDTOS
         public DateTime EndDate { get; set; }
         public Status Status { get; set; }
 
-        public Category Category { get; set; }
-
-
-        /*Foreign key*/
-        public int EmployeeId { get; set; }
-        public int ProjectId { get; set; }
     }
 }

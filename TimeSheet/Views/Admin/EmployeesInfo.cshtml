@@ -1,0 +1,50 @@
+﻿
+@model IEnumerable<GetAllEmployeeDTO>
+
+@{
+    ViewData["Title"] = "EmployeesPerProject";
+   
+}
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="fs-3 text-primary text-capitalize">
+        @ViewBag.ProjectName
+    </h2>
+</div>
+
+@if (Model != null && Model.Any())
+
+{
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center shadow-sm rounded">
+            <thead class="table-primary text-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(e => e.Name)</th>
+                    <th>@Html.DisplayNameFor(e => e.Email)</th>
+                    <th>@Html.DisplayNameFor(e => e.Address)</th>
+                    <th>@Html.DisplayNameFor(e => e.PhoneNumber)</th>
+                </tr>
+            </thead>
+            <tbody class="table-light">
+                @foreach (var employee in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold text-capitalize">@employee.Name</td>
+                        <td>@employee.Email</td>
+                        <td>@(employee.Address ?? "Unknown")</td>
+                        <td>@(employee.PhoneNumber ?? "Unknown")</td>
+                       
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+else{
+<div class="alert alert-warning text-center fw-semibold shadow-sm rounded">
+    <i class="fa-solid fa-triangle-exclamation me-2"></i>
+    No employees found for this project.
+</div>
+}
+

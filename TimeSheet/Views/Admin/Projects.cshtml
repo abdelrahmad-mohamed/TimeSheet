@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GetAllProjectsDTO>
+
+@{
+    ViewBag.Title = "Projects";
+}
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="fs-3 fw-bold text-primary text-capitalize">
+        <i class="fa-solid fa-folder-open"></i> Project List
+    </h2>
+</div>
+
+<div class="row g-4">
+    @foreach (var project in Model)
+    {
+        <div class="col-md-4">
+            <div class="card shadow-sm h-100 border-0">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between align-items-center mb-2">
+                        <h5 class="card-title fw-bold text-capitalize text-primary mb-0">
+                            @project.Name
+                        </h5>
+                        <span class="badge bg-success">
+                            @project.PrecentageOfCompletence%
+                        </span>
+                    </div>
+
+                    <p class="card-text text-muted">@project.Description</p>
+
+                    <div class="d-flex flex-wrap gap-2">
+                        <a asp-action="EmployeesInfo" asp-route-id="@project.Id">
+                            <span class="badge p-2 bg-info text-dark rounded-3 fs-6">
+                                👥 @project.NoOfEmployees Employees
+                            </span>
+                        </a>
+
+                        <a asp-action="TaskInfo" asp-route-id="@project.Id">
+                            <span class="badge p-2 bg-warning text-dark rounded-3 fs-6">
+                                📋 @project.NoOfTasks Tasks
+                            </span>
+                        </a>
+                       
+
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
