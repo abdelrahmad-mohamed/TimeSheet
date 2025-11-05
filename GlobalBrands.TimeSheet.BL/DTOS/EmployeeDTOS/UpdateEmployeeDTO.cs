@@ -25,5 +25,7 @@ namespace GlobalBrands.TimeSheet.BL.DTOS.EmployeeDTOS
         [DataType(DataType.Currency)]
         [Range(100, double.MaxValue, ErrorMessage = "Salary must be more than 100$ ")]
         public decimal Salary { get; set; }
+
+        public string UserId { get; set; } = null!;
     }
 }

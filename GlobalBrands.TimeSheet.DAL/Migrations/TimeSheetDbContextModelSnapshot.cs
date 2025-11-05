@@ -16,7 +16,7 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.9")
+                .HasAnnotation("ProductVersion", "8.0.20")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
@@ -29,11 +29,6 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
                         .HasColumnName("Task Id");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Category")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("Task Category");
 
                     b.Property<DateTime?>("CompleteTask")
                         .ValueGeneratedOnAdd()
@@ -55,7 +50,9 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime>("StartDate")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GetDate()");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -75,106 +72,13 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
 
                     b.HasIndex("ProjectId");
 
-                    b.ToTable("Tasks");
+                    b.ToTable("Tasks", t =>
+                        {
+                            t.HasCheckConstraint("CK_Task_EndBeforeNow", "[EndDate] > GETDATE()");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Category = "Research",
-                            Description = "Create ERD and schema",
-                            EmployeeId = 1,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 1,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "InProgress",
-                            Title = "Design DB"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Category = "FeatureDevelopment",
-                            Description = "Build initial API endpoints",
-                            EmployeeId = 1,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 1,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "InProgress",
-                            Title = "API Setup"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            Category = "FeatureDevelopment",
-                            CompleteTask = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Implement product catalog",
-                            EmployeeId = 1,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 2,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "Completed",
-                            Title = "Product Module"
-                        },
-                        new
-                        {
-                            Id = 4,
-                            Category = "FeatureDevelopment",
-                            Description = "Implement shopping cart",
-                            EmployeeId = 1,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 2,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "Pending",
-                            Title = "Cart Module"
-                        },
-                        new
-                        {
-                            Id = 5,
-                            Category = "Testing",
-                            Description = "Write unit tests",
-                            EmployeeId = 2,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 1,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "InProgress",
-                            Title = "Testing API"
-                        },
-                        new
-                        {
-                            Id = 6,
-                            Category = "Improvement",
-                            CompleteTask = new DateTime(2025, 9, 29, 18, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Check frontend components",
-                            EmployeeId = 2,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 1,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "Completed",
-                            Title = "UI Review"
-                        },
-                        new
-                        {
-                            Id = 7,
-                            Category = "Testing",
-                            Description = "Test payment gateway",
-                            EmployeeId = 2,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 2,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "InProgress",
-                            Title = "Payment Module"
-                        },
-                        new
-                        {
-                            Id = 8,
-                            Category = "Documentation",
-                            Description = "Document found issues",
-                            EmployeeId = 2,
-                            EndDate = new DateTime(2025, 9, 27, 17, 0, 0, 0, DateTimeKind.Unspecified),
-                            ProjectId = 2,
-                            StartDate = new DateTime(2025, 9, 27, 9, 0, 0, 0, DateTimeKind.Unspecified),
-                            Status = "InProgress",
-                            Title = "Bug Report"
+                            t.HasCheckConstraint("CK_Task_StartBeforeEnd", "[StartDate] < [EndDate]");
+
+                            t.HasCheckConstraint("CK_Task_StartBeforeNow", "[StartDate] >= GETDATE()");
                         });
                 });
 
@@ -188,12 +92,7 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
                     b.Property<string>("Address")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<int?>("AzureObjectId")
-                        .HasColumnType("int")
-                        .HasColumnName("oid");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -208,35 +107,18 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
                         .HasColumnName("Employee Name");
 
                     b.Property<string>("PhoneNumber")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<decimal>("Salary")
-                        .HasColumnType("decimal(18,2)");
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
 
                     b.HasKey("Id");
 
-                    b.ToTable("Employees");
+                    b.HasIndex("UserId")
+                        .IsUnique()
+                        .HasFilter("[UserId] IS NOT NULL");
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            Address = "Cairo, Egypt",
-                            Email = "Ahmedli@example.com",
-                            Name = "Ahmed Ali",
-                            PhoneNumber = "01012345678",
-                            Salary = 15000m
-                        },
-                        new
-                        {
-                            Id = 2,
-                            Address = "Alexandria, Egypt",
-                            Email = "sara.mohamed@example.com",
-                            Name = "Sara Mohamed",
-                            PhoneNumber = "01198765432",
-                            Salary = 12000m
-                        });
+                    b.ToTable("Employees");
                 });
 
             modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.Project", b =>
@@ -266,22 +148,207 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Projects");
+                });
 
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Internal project to track working hours",
-                            Name = "Time Tracking System"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            DateTime = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Description = "Web platform for online shopping",
-                            Name = "E-Commerce Platform"
-                        });
+            modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("AccessFailedCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Address")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Email")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<bool>("EmailConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("LockoutEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTimeOffset?>("LockoutEnd")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("NormalizedEmail")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedUserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("PasswordHash")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("PhoneNumberConfirmed")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("SecurityStamp")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TwoFactorEnabled")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("UserName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedEmail")
+                        .HasDatabaseName("EmailIndex");
+
+                    b.HasIndex("NormalizedUserName")
+                        .IsUnique()
+                        .HasDatabaseName("UserNameIndex")
+                        .HasFilter("[NormalizedUserName] IS NOT NULL");
+
+                    b.ToTable("AspNetUsers", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
+                {
+                    b.Property<string>("Id")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ConcurrencyStamp")
+                        .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("NormalizedName")
+                        .HasMaxLength(256)
+                        .HasColumnType("nvarchar(256)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("NormalizedName")
+                        .IsUnique()
+                        .HasDatabaseName("RoleNameIndex")
+                        .HasFilter("[NormalizedName] IS NOT NULL");
+
+                    b.ToTable("AspNetRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RoleId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetRoleClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("ClaimType")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClaimValue")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserClaims", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderKey")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ProviderDisplayName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("LoginProvider", "ProviderKey");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("AspNetUserLogins", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("RoleId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("UserId", "RoleId");
+
+                    b.HasIndex("RoleId");
+
+                    b.ToTable("AspNetUserRoles", (string)null);
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("LoginProvider")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("Value")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("UserId", "LoginProvider", "Name");
+
+                    b.ToTable("AspNetUserTokens", (string)null);
                 });
 
             modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.ETask", b =>
@@ -305,12 +372,78 @@ namespace GlobalBrands.TimeSheet.DAL.Migrations
 
             modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.Employee", b =>
                 {
+                    b.HasOne("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", "User")
+                        .WithOne("Employee")
+                        .HasForeignKey("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.Employee", "UserId");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserClaim<string>", b =>
+                {
+                    b.HasOne("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserLogin<string>", b =>
+                {
+                    b.HasOne("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserRole<string>", b =>
+                {
+                    b.HasOne("Microsoft.AspNetCore.Identity.IdentityRole", null)
+                        .WithMany()
+                        .HasForeignKey("RoleId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityUserToken<string>", b =>
+                {
+                    b.HasOne("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", null)
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.Employee", b =>
+                {
                     b.Navigation("Tasks");
                 });
 
             modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.Project", b =>
                 {
                     b.Navigation("Tasks");
+                });
+
+            modelBuilder.Entity("GlobalBrands.TimeSheet.DAL.Persistence.Data.Entities.User", b =>
+                {
+                    b.Navigation("Employee")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

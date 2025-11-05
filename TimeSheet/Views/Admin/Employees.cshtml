@@ -1,0 +1,39 @@
+﻿@model IEnumerable<GetAllEmployeeDTO>
+
+@{
+    ViewData["Title"] = "Employees";
+}
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="fs-3 fw-bold text-primary text-capitalize">
+        <i class="fa-solid fa-users"></i> Employee List
+    </h2>
+</div>
+
+<div class="table-responsive">
+    <table class="table table-hover table-bordered align-middle text-center shadow-sm rounded">
+        <thead class="table-primary text-dark">
+            <tr>
+                <th>@Html.DisplayNameFor(e => e.Name)</th>
+                <th>@Html.DisplayNameFor(e => e.Email)</th>
+                <th>@Html.DisplayNameFor(e => e.Address)</th>
+                <th>@Html.DisplayNameFor(e => e.PhoneNumber)</th>
+                <th>@Html.DisplayNameFor(e=>e.TotalHours)</th>
+                <th>@Html.DisplayNameFor(e => e.EfficiencyofCompletedTasks)</th>
+            </tr>
+        </thead>
+        <tbody class="table-light">
+            @foreach (var employee in Model)
+            {
+                <tr>
+                    <td class="fw-semibold text-capitalize">@employee.Name</td>
+                    <td>@employee.Email</td>
+                    <td>@(employee.Address ?? "Unknown")</td>
+                    <td>@(employee.PhoneNumber ?? "Unknown")</td>
+                    <td>@employee.TotalHours</td>
+                    <td>@employee.EfficiencyofCompletedTasks%</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

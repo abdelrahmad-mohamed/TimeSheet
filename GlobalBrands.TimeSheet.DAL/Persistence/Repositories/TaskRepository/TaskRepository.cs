@@ -21,7 +21,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.TaskRepository
 
         public async  Task<ETask?> GetByIdAsync(int id)
         {
-            return await timeSheetDbContext.Tasks.Include(e => e.Project).Include(e => e.Employee).FirstOrDefaultAsync(e=>e.Id==id);
+            return await timeSheetDbContext.Tasks.Include(e => e.Project).Include(e => e.Employee).AsNoTracking().FirstOrDefaultAsync(e=>e.Id==id);
         }
         public async Task<int> AddAsync(ETask task)
         {
@@ -45,6 +45,11 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.TaskRepository
         {
             timeSheetDbContext.Remove(task);
             return await timeSheetDbContext.SaveChangesAsync();
+        }
+
+        public async Task<IEnumerable<ETask>> GetTasksByProjectId(int id) {
+            var tasks = await timeSheetDbContext.Tasks.Where(t=>t.ProjectId==id).ToListAsync();
+            return tasks;
         }
     }
 }

@@ -1,5 +1,8 @@
+wwwroot\css\AccessDenied.css
+wwwroot\css\AuthenticateStyleSheet.css
 wwwroot\css\site.css
 wwwroot\favicon.ico
+wwwroot\js\AuthenticationLayOut.js
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map
@@ -46,6 +49,8 @@ wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
 wwwroot\lib\bootstrap\LICENSE
+wwwroot\lib\fontawesome\css\all.min.css
+wwwroot\lib\fontawesome\js\all.min.js
 wwwroot\lib\jquery\dist\jquery.js
 wwwroot\lib\jquery\dist\jquery.min.js
 wwwroot\lib\jquery\dist\jquery.min.map

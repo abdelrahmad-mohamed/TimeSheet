@@ -10,15 +10,17 @@ namespace GlobalBrands.TimeSheet.BL.Services.EmployeeService
 {
     public interface IEmployeeService
     {
-        public Task<IEnumerable<Employee>> GetAll();
+        public Task<IEnumerable<GetAllEmployeeDTO>> GetAll();// 
 
-        public Task<Employee?> GetById(int id);
+        public Task<GetEmployeeProfileDTO?> GetById(string? id);
 
         public Task<int> Add(CreateEmployeeDTO employee);
 
         public Task<int> Update(UpdateEmployeeDTO employee);
 
         public Task<int> Delete(Employee employee);
+
+        public Task<IEnumerable<GetAllEmployeeDTO>> GetEmployeesByProjectId(int id);
 
     }
 }

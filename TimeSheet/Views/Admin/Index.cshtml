@@ -3,7 +3,7 @@
     ViewBag.Title = "Admin Dashboard";
 }
 
-<div class="row">
+<div class="row mt-3">
     @foreach (var card in Model.DashboardCard)
     {
         string cardClass = card.Status.ToString() switch

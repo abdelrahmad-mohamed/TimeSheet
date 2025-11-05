@@ -1,0 +1,90 @@
+﻿@model EmployeeTaskDTO
+
+@{
+    ViewBag.Title = "Edit Task";
+}
+
+<div class="modal fade" id="EditTaskModal_@Model.Id" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content p-4 rounded-4 shadow-lg">
+            <div class="modal-header border-0">
+                <h5 class="modal-title fw-bold text-primary">Edit Task</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+
+            <div class="modal-body">
+                <form id="EditTaskForm" asp-action="EditTask" asp-controller="Employee" method="post">
+                    @Html.AntiForgeryToken()
+                    <div class="text-danger text-space" asp-validation-summary="ModelOnly"></div>
+                    <input type="hidden" asp-for="Id" />
+
+                    <!-- TaskName -->
+                    <div class="mb-3">
+                        <label asp-for="TaskName" class="form-label fw-semibold"></label>
+                        <input asp-for="TaskName" class="form-control" placeholder="Enter task name..." />
+                        <span class="text-danger" asp-validation-for="TaskName"></span>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="mb-3">
+                        <label asp-for="Description" class="form-label fw-semibold"></label>
+                        <textarea asp-for="Description" class="form-control" rows="2" placeholder="Enter description..."></textarea>
+                        <span class="text-danger" asp-validation-for="Description"></span>
+                    </div>
+
+                    <!-- Dates -->
+                    <div class="d-flex justify-content-between gap-2 mb-3">
+                        <div class="w-50">
+                            <label asp-for="StartDate" class="form-label fw-semibold"></label>
+                            <input asp-for="StartDate" class="form-control" id="startDate_@Model.Id" />
+                            <span class="text-danger" asp-validation-for="StartDate"></span>
+                        </div>
+                        <div class="w-50">
+                            <label asp-for="EndDate" class="form-label fw-semibold"></label>
+                            <input asp-for="EndDate" class="form-control" id="endDate_@Model.Id" />
+                            <span class="text-danger" asp-validation-for="EndDate"></span>
+                        </div>
+                    </div>
+
+                    <!-- Status -->
+                    <div class="mb-3">
+                        <label asp-for="Status" class="form-label fw-semibold"></label>
+                        <select asp-for="Status" class="form-select" asp-items="@(ViewBag._Status)" id="status_@Model.Id">
+                        </select>
+                        <span class="text-danger" asp-validation-for="Status"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-end">
+                        <button type="submit" class="btn btn-primary">Edit Task</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const status = document.getElementById("status_@Model.Id");
+        const start = document.getElementById("startDate_@Model.Id");
+        const end = document.getElementById("endDate_@Model.Id");
+
+        function handleDateFields() {
+            const value = status.value;
+
+            if (value === "Pending") {
+                start.disabled = false;
+                end.disabled = false;
+            } else if (value === "InProgress") {
+                start.disabled = true;
+                end.disabled = false;
+            } else if (value === "Completed") {
+                start.disabled = true;
+                end.disabled = true;
+            }
+        }
+
+        status.addEventListener("change", handleDateFields);
+        handleDateFields(); // تشغيل عند الفتح لأول مرة
+    });
+</script>

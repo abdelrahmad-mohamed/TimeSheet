@@ -1,0 +1,66 @@
+﻿@model IEnumerable<ProjectTasksViewModel>
+
+@{
+    ViewData["Title"] = "TasksPerProject";
+}
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+    <h2 class="fs-3 text-primary text-capitalize">
+    @ViewBag.ProjectName 
+    </h2>
+</div>
+
+
+
+@if (Model != null && Model.Any())
+
+{
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered align-middle text-center shadow-sm rounded">
+            <thead class="table-primary text-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(t => t.Title)</th>
+                    <th>@Html.DisplayNameFor(t=>t.Description)</th>
+                    <th>@Html.DisplayNameFor(t => t.StartDate)</th>
+                    <th>@Html.DisplayNameFor(t=>t.EndDate)</th>
+                    <th>@Html.DisplayNameFor(t=>t.Status)</th>
+                </tr>
+            </thead>
+            <tbody class="table-light">
+                @foreach (var task in Model)
+                {
+                    <tr>
+                        <td class="fw-semibold text-capitalize">@task.Title</td>
+                        <td>@task.Description</td>
+                        <td>@task.StartDate</td>
+                        <td>@task.EndDate</td>
+                        @{
+                            var statusbg = task.Status.ToString() switch
+                            {
+                                "InProgress" => "bg-secondary text-white",
+                                "Pending" => "bg-danger text-white",
+                                "Completed" => "bg-success text-white",
+                                _ => "bg-secondary text-white"
+                            };
+                        }
+
+                        <td>
+                            <span class="badge rounded-pill px-3 py-2 @statusbg">
+                                @task.Status
+                            </span>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+}
+
+else
+{
+    <div class="alert alert-warning text-center fw-semibold shadow-sm rounded">
+        <i class="fa-solid fa-triangle-exclamation me-2"></i>
+        No Tasks found for this project.
+    </div>
+}
+

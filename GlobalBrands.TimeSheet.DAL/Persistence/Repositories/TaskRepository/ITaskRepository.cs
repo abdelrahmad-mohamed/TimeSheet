@@ -18,5 +18,7 @@ namespace GlobalBrands.TimeSheet.DAL.Persistence.Repositories.TaskRepository
         public Task<int> UpdateAsync(ETask task);
 
         public Task<int> DeleteAsync(ETask task);
+
+        public Task<IEnumerable<ETask>> GetTasksByProjectId(int id);
     }
 }

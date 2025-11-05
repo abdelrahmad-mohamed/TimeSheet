@@ -1,0 +1,44 @@
+﻿ @model LoginViewModel
+@{
+	ViewData["Title"] = "Log in";
+	Layout = "~/Views/Shared/_AuthenticationLayOut.cshtml";
+}
+
+<!-- Login Form --> 
+<div class="form-container">
+ <form class="form active" asp-action="Login" id="login-form">   
+     <h2>Log In</h2>
+		<div asp-validation-summary="ModelOnly"></div>
+        <div class="input-group">
+            <i class="fas fa-user"></i>
+            <input asp-for="UserName" placeholder="Enter UserName" required />
+
+        </div>
+        <span class="text-danger" asp-validation-for="UserName"></span>
+
+        <div class="input-group">
+            <i class="fas fa-lock"></i>
+            <input asp-for="Password" placeholder="Enter Password" required />
+
+        </div>
+        <span class="text-danger" asp-validation-for="Password"></span>
+     <div class="options">   
+         <div class="remember">
+             <input asp-for="RememberMe" id="remember">
+				<label asp-for="RememberMe"></label>
+             </div>   
+         @* <a href="#" class="forgot">Forgot Password?</a>    *@
+     </div>   
+     <button  class="btn">Login</button>   
+     @* <div class="separator"><span>Or continue with</span></div>    *@
+     @* <div class="social-login">    *@
+     @*     <div class="social-btn"><i class="fab fa-google"></i></div>    *@
+     @*     <div class="social-btn"><i class="fab fa-facebook-f"></i></div>    *@
+     @*     <div class="social-btn"><i class="fab fa-twitter"></i></div>    *@
+     @* </div>  *@
+ </form>
+ </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

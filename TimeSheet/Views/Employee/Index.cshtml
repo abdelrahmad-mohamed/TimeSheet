@@ -1,0 +1,502 @@
+﻿@model GetEmployeeProfileDTO
+
+
+
+@{
+
+    ViewBag.Title = "Employee Dashboard";
+
+}
+
+
+
+@if (!string.IsNullOrEmpty(TempData["Message"] as string))
+{
+    <!-- Toast Container -->
+    <div aria-live="polite" aria-atomic="true" style="position: fixed; top: 20px; right: 20px; z-index: 9999;">
+        <div id="myToast" class="toast shadow-lg custom-toast show" data-autohide="false"
+             style="background-color: #f0f8ff; border: 1px solid #007bff; min-width: 300px;">
+            <div class="toast-header" style="background-color: #007bff; color: white;">
+                <strong class="mr-auto">🔔 Notification</strong>
+                <button type="button" class="ml-2 mb-1 close" data-bs-dismiss="toast" style="color: white;">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="toast-body" style="color: #00008b; font-weight: bold;">
+                @TempData["Message"]
+            </div>
+        </div>
+    </div>
+}
+
+
+
+
+<!-- Page Title -->
+
+<div class="d-flex justify-content-center align-items-center mb-4">
+
+    <h2 class="fs-2 fw-bold text-primary text-uppercase">
+
+        <i class="fa-solid fa-clock"></i> My Tasks
+
+    </h2>
+
+</div>
+
+
+<!-- Create Buttons -->
+
+<div class="d-flex justify-content-end ">
+
+    <button class="btn btn-primary rounded-3 mx-1" data-bs-toggle="modal" data-bs-target="#createTaskModal">
+
+        <i class="fa-solid fa-plus"></i> Create Task
+
+    </button>
+
+    <button class="btn btn-success rounded-3 mx-1" data-bs-toggle="modal" data-bs-target="#createProjectModal">
+
+        <i class="fa-solid fa-plus"></i> Create Project
+
+    </button>
+
+</div>
+
+<!-- Task Table -->
+@if (Model.Tasks != null && Model.Tasks.Any())
+{
+<!-- Main Layout -->
+
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Sidebar -->
+
+        <div id="sidebar" class="col-md-2 bg-light p-3">
+            <h5 class="fw-bold mb-3">Menu</h5>
+
+            <!-- Notification Box -->
+            <div class="mb-4">
+                <h5 class="text-primary fw-bold mb-2">
+                    <i class="fa-solid fa-bell"></i> System Message
+                </h5>
+                <div class="p-3 bg-white shadow-sm rounded" id="systemMessageBox">
+                    @if (!string.IsNullOrEmpty(ViewBag.SystemMessage))
+                    {
+                        <span class="text-danger fw-bold">@ViewBag.SystemMessage</span>
+                    }
+                    else
+                    {
+                        <span class="text-muted">No new messages</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Filter by Projects -->
+            <div class="mb-4">
+                <h5 class="text-primary fw-bold mb-2">
+                    <i class="fa-solid fa-diagram-project"></i> Filter by Project
+                </h5>
+                <div id="projectFilters" class="ps-2">
+                    @if (ViewBag._Projects != null)
+                    {
+                        foreach (var project in (List<GetAllProjectsDTO>)ViewBag._Projects)
+                        {
+                            <div class="form-check mb-1">
+                                <input class="form-check-input project-filter"
+                                       type="checkbox"
+                                       value="@project.Name"
+                                       id="proj_@project.Id" />
+                                <label class="form-check-label" for="proj_@project.Id">@project.Name</label>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <span class="text-muted">No Projects available</span>
+                    }
+                </div>
+            </div>
+
+            <!-- Filter by Status -->
+            <div>
+                <h5 class="text-primary fw-bold mb-2">
+                    <i class="fa-solid fa-bars-progress"></i> Filter by Status
+                </h5>
+                <div id="statusFilters" class="ps-2">
+                    @foreach (var status in (SelectList)ViewBag._Status)
+                    {
+                        <div class="form-check">
+                            <input class="form-check-input status-filter" type="checkbox" id="status_@status.Value" value="@status.Text">
+                            <label class="form-check-label" for="status_@status.Value">@status.Text</label>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <!-- Main Content -->
+
+        <div id="mainContent" class="col-md-10 offset-md-2">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+
+                
+                
+
+
+
+            </div>
+
+            
+
+            <!-- Task Table -->
+
+            <div class="table-responsive shadow-sm rounded">
+
+                <table class="table table-hover align-middle text-center">
+
+                    <thead class="table-primary">
+
+                        <tr>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().TaskName)</th>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().Description)</th>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().ProjectName)</th>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().StartDate)</th>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().EndDate)</th>
+
+                            <th>@Html.DisplayNameFor(t => t.Tasks.First().Status)</th>
+
+                            <th>Actions</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        @foreach (var task in Model.Tasks)
+
+                        {
+
+                            var statusbg = task.Status.ToString() switch
+
+                            {
+
+                                "InProgress" => "bg-secondary text-white",
+
+                                "Pending" => "bg-danger text-white",
+
+                                "Completed" => "bg-success text-white",
+
+                                _ => "bg-secondary text-white"
+
+                            };
+
+
+
+                            <tr>
+
+                                <td>@task.TaskName</td>
+
+                                <td>@task.Description</td>
+
+                                <td>@task.ProjectName</td>
+
+                                <td>@task.StartDate</td>
+
+                                <td>@task.EndDate</td>
+
+                                <td><span class="badge @statusbg rounded-2">@task.Status</span></td>
+
+                                <td>
+
+                                    <button type="button" class="btn btn-outline-info btn-sm" data-bs-toggle="modal" data-bs-target="#EditTaskModal_@task.Id">
+
+                                        <i class="fa-solid fa-pen"></i>
+
+                                    </button>
+
+                                    <button type="button" class="btn btn-outline-danger btn-sm" data-bs-toggle="modal" data-bs-target="#deleteTaskModal_@task.Id">
+
+                                        <i class="fa-solid fa-trash"></i>
+
+                                    </button>
+
+                                    @await Html.PartialAsync("DeleteTaskPartialView", task)
+                                        <div id="EditContainer">
+                                            @await Html.PartialAsync("EditTaskPartialView", task, new ViewDataDictionary(ViewData)
+                               {
+                                   ["_Status"] = ViewBag._Status
+                               })
+                                        </div>
+                                  
+
+                                </td>
+
+                            </tr>
+
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </div> <!-- end main content -->
+
+    </div> <!-- end row -->
+    <!-- Modals -->
+
+   
+
+</div> <!-- end container-fluid -->
+}
+else
+{
+    <div class="alert alert-info text-center fw-bold shadow-sm rounded" role="alert">
+        <i class="fa-solid fa-circle-info"></i> No tasks available
+    </div>
+}
+
+
+<div id="CreateContainer">
+
+    @await Html.PartialAsync("CreateTaskPartialView", new EmployeeTaskDTO(), new ViewDataDictionary(ViewData)
+
+{
+
+    ["Projects"] = ViewBag._Projects,
+
+})
+
+</div>
+
+
+
+<div id="CreateProjectContainer">
+
+    @await Html.PartialAsync("CreateProjectPartialView", new CreateProjectDTO())
+
+</div>
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial" />
+
+
+
+    <script>
+
+        $(document).ready(function () {
+
+            // Create Task
+
+            $(document).on("submit", "#CreateTaskForm", function (e) {
+
+                e.preventDefault();
+
+                if (!$(this).valid()) return;
+
+                $.ajax({
+
+                    url: '@Url.Action("CreateTask", "Employee")',
+
+                    type: "POST",
+
+                    data: $(this).serialize(),
+
+                    success: function (response) {
+
+                        if (response.success)
+
+                            window.location.href = response.redirectUrl;
+
+                        
+
+                           else {
+                // ✅ اقفل المودال القديم
+                $("#createTaskModal").modal("hide");
+
+                // ✅ شيل الـ backdrop القديمة
+                $(".modal-backdrop").remove();
+
+                // ✅ رجّع الـ partial view الجديد مكان القديم
+                $("#CreateContainer").html(response);
+
+                // ✅ افتح المودال الجديد (اللي رجع من السيرفر)
+                $("#createTaskModal").modal("show");
+            }
+
+
+                    },
+
+                    error: function (xhr) {
+
+                        var response = JSON.parse(xhr.responseText);
+
+                        alert(response.message);
+
+                    }
+
+                });
+
+            });
+
+
+
+            // Edit Task
+
+            $(document).on("submit", "#EditTaskForm", function (e) {
+
+                e.preventDefault();
+
+                if (!$(this).valid()) return;
+
+                $.ajax({
+
+                    url: '@Url.Action("EditTask", "Employee")',
+
+                    type: "POST",
+
+                    data: $(this).serialize(),
+
+                    success: function (response) {
+
+                        if (response.success)
+
+                            window.location.href = response.redirectUrl;
+
+                          else {
+                // ✅ اقفل المودال القديم
+                $("#EditTaskModal_@Model.Id").modal("hide");
+
+                // ✅ شيل الـ backdrop القديمة
+                $(".modal-backdrop").remove();
+
+                // ✅ رجّع الـ partial view الجديد مكان القديم
+                $("#EditContainer").html(response);
+
+                // ✅ افتح المودال الجديد (اللي رجع من السيرفر)
+                $("#EditTaskModal_@Model.Id").modal("show");
+            }
+
+                    },
+
+                    error: function (xhr) {
+
+                        var response = JSON.parse(xhr.responseText);
+
+                        alert(response.message);
+
+                    }
+
+                });
+
+            });
+
+
+
+            // Create Project
+
+            $(document).on("submit", "#CreateProjectForm", function (e) {
+
+                e.preventDefault();
+
+                if (!$(this).valid()) return;
+
+                $.ajax({
+
+                    url: '@Url.Action("CreateProject", "Employee")',
+
+                    type: "POST",
+
+                    data: $(this).serialize(),
+
+                    success: function (response) {
+
+                        if (response.success)
+
+                            window.location.href = response.redirectUrl;
+
+                        else
+
+                            $("#CreateProjectContainer").html(response);
+
+                    },
+
+                    error: function (xhr) {
+
+                        var response = JSON.parse(xhr.responseText);
+
+                        alert(response.message);
+
+                    }
+
+                });
+
+            });
+
+
+
+            // Filtering
+
+            function applyFilters() {
+
+            var selectedProjects = $(".project-filter:checked").map(function () {
+
+                return $(this).val();
+
+            }).get();
+
+
+
+            var selectedStatuses = $(".status-filter:checked").map(function () {
+
+                return $(this).val();
+
+            }).get();
+
+
+
+            $("tbody tr").each(function () {
+
+                var projectName = $(this).find("td:nth-child(3)").text().trim();
+
+                var statusName = $(this).find("td:nth-child(6)").text().trim();
+
+
+
+                var showByProject = selectedProjects.length === 0 || selectedProjects.includes(projectName);
+
+                var showByStatus = selectedStatuses.length === 0 || selectedStatuses.includes(statusName);
+
+
+
+                if (showByProject && showByStatus)
+
+                    $(this).show();
+
+                else
+
+                    $(this).hide();
+
+            });
+
+        }
+
+
+            $(".project-filter,.status-filter").on("change", applyFilters);
+
+        });
+        
+
+    </script>
+
+}

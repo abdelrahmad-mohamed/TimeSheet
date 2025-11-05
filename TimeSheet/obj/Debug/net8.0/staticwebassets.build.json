@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "4k/MhCizjNPfDydrSqM9sfXihbqSXS4CUTZSHcPLLC0=",
+  "Hash": "T7sOLSq89SvLTQNHnwkf7KdhMjgofrzpq0q9kSL1rDI=",
   "Source": "GlobalBrands.TimeSheet.PL",
   "BasePath": "_content/GlobalBrands.TimeSheet.PL",
   "Mode": "Default",
@@ -59,6 +59,48 @@
       "OriginalItemSpec": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\GlobalBrands.TimeSheet.PL.bundle.scp.css"
     },
     {
+      "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AccessDenied.css",
+      "SourceId": "GlobalBrands.TimeSheet.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\",
+      "BasePath": "_content/GlobalBrands.TimeSheet.PL",
+      "RelativePath": "css/AccessDenied#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "72hi8yvfx6",
+      "Integrity": "36YlZMglcE0Adi3pi9UibTNmCZqJGu4o4ClhRUjMfis=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AccessDenied.css"
+    },
+    {
+      "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AuthenticateStyleSheet.css",
+      "SourceId": "GlobalBrands.TimeSheet.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\",
+      "BasePath": "_content/GlobalBrands.TimeSheet.PL",
+      "RelativePath": "css/AuthenticateStyleSheet#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "yyyujwt3hm",
+      "Integrity": "ig+qSdbTAlRFfuU7SZaT3okkujX5gcWtBozRxq5OXzE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\AuthenticateStyleSheet.css"
+    },
+    {
       "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\site.css",
       "SourceId": "GlobalBrands.TimeSheet.PL",
       "SourceType": "Discovered",
@@ -73,8 +115,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "c2tiyv64ts",
-      "Integrity": "pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=",
+      "Fingerprint": "wmlzh4b8pq",
+      "Integrity": "SEkwpnC/gFNfVkm/sKHGKZ+QEW6yzSWrP/6gLGwUf6s=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
@@ -101,6 +143,27 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
+      "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\AuthenticationLayOut.js",
+      "SourceId": "GlobalBrands.TimeSheet.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\",
+      "BasePath": "_content/GlobalBrands.TimeSheet.PL",
+      "RelativePath": "js/AuthenticationLayOut#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "261elt73c4",
+      "Integrity": "lgmXJZczkd+WoJ18GubVLcGZvT28wdUxd1UYOKw/gd0=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\AuthenticationLayOut.js"
+    },
+    {
       "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
       "SourceId": "GlobalBrands.TimeSheet.PL",
       "SourceType": "Discovered",
@@ -115,8 +178,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "vz7v96mwp4",
-      "Integrity": "OxtplTOOJuBJk7pJ2YTyIc0jv3fLiPksPQzYaOuENsc=",
+      "Fingerprint": "qx28oe8a5t",
+      "Integrity": "Ii+eXid2YozYovJWY/IKi0rhPop42xkzPv3latLAY0I=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\site.js"
@@ -1067,6 +1130,48 @@
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\LICENSE"
     },
     {
+      "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\css\\all.min.css",
+      "SourceId": "GlobalBrands.TimeSheet.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\",
+      "BasePath": "_content/GlobalBrands.TimeSheet.PL",
+      "RelativePath": "lib/fontawesome/css/all.min#[.{fingerprint}]?.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "unrcvpaolo",
+      "Integrity": "9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fontawesome\\css\\all.min.css"
+    },
+    {
+      "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\js\\all.min.js",
+      "SourceId": "GlobalBrands.TimeSheet.PL",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\",
+      "BasePath": "_content/GlobalBrands.TimeSheet.PL",
+      "RelativePath": "lib/fontawesome/js/all.min#[.{fingerprint}]?.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "py2ybw1gba",
+      "Integrity": "f0EjW9LhJ4qZoAJU+Vd5Cp9lIFKbrnrIebDBsGl0SQE=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\lib\\fontawesome\\js\\all.min.js"
+    },
+    {
       "Identity": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "SourceId": "GlobalBrands.TimeSheet.PL",
       "SourceType": "Discovered",
@@ -1321,8 +1426,8 @@
   ],
   "Endpoints": [
     {
-      "Route": "css/site.c2tiyv64ts.css",
-      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\site.css",
+      "Route": "css/AccessDenied.72hi8yvfx6.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AccessDenied.css",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -1331,7 +1436,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "1300"
         },
         {
           "Name": "Content-Type",
@@ -1339,11 +1444,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"36YlZMglcE0Adi3pi9UibTNmCZqJGu4o4ClhRUjMfis=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 26 Sep 2025 19:33:16 GMT"
+          "Value": "Mon, 15 Sep 2025 10:59:58 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1353,15 +1458,134 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "c2tiyv64ts"
+          "Value": "72hi8yvfx6"
         },
         {
           "Name": "label",
-          "Value": "css/site.css"
+          "Value": "css/AccessDenied.css"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-36YlZMglcE0Adi3pi9UibTNmCZqJGu4o4ClhRUjMfis="
+        }
+      ]
+    },
+    {
+      "Route": "css/AccessDenied.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AccessDenied.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1300"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"36YlZMglcE0Adi3pi9UibTNmCZqJGu4o4ClhRUjMfis=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Mon, 15 Sep 2025 10:59:58 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-36YlZMglcE0Adi3pi9UibTNmCZqJGu4o4ClhRUjMfis="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthenticateStyleSheet.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AuthenticateStyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ig+qSdbTAlRFfuU7SZaT3okkujX5gcWtBozRxq5OXzE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 21:38:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ig+qSdbTAlRFfuU7SZaT3okkujX5gcWtBozRxq5OXzE="
+        }
+      ]
+    },
+    {
+      "Route": "css/AuthenticateStyleSheet.yyyujwt3hm.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\AuthenticateStyleSheet.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "6516"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ig+qSdbTAlRFfuU7SZaT3okkujX5gcWtBozRxq5OXzE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 21:38:25 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "yyyujwt3hm"
+        },
+        {
+          "Name": "label",
+          "Value": "css/AuthenticateStyleSheet.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ig+qSdbTAlRFfuU7SZaT3okkujX5gcWtBozRxq5OXzE="
         }
       ]
     },
@@ -1376,7 +1600,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "362"
+          "Value": "1706"
         },
         {
           "Name": "Content-Type",
@@ -1384,11 +1608,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0=\""
+          "Value": "\"SEkwpnC/gFNfVkm/sKHGKZ+QEW6yzSWrP/6gLGwUf6s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Fri, 26 Sep 2025 19:33:16 GMT"
+          "Value": "Sun, 19 Oct 2025 19:33:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1398,7 +1622,52 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-pAGv4ietcJNk/EwsQZ5BN9+K4MuNYS2a9wl4Jw+q9D0="
+          "Value": "sha256-SEkwpnC/gFNfVkm/sKHGKZ+QEW6yzSWrP/6gLGwUf6s="
+        }
+      ]
+    },
+    {
+      "Route": "css/site.wmlzh4b8pq.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\css\\site.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1706"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"SEkwpnC/gFNfVkm/sKHGKZ+QEW6yzSWrP/6gLGwUf6s=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sun, 19 Oct 2025 19:33:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wmlzh4b8pq"
+        },
+        {
+          "Name": "label",
+          "Value": "css/site.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-SEkwpnC/gFNfVkm/sKHGKZ+QEW6yzSWrP/6gLGwUf6s="
         }
       ]
     },
@@ -1507,7 +1776,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 19:43:49 GMT"
+          "Value": "Sun, 12 Oct 2025 10:03:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1544,7 +1813,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 19:43:49 GMT"
+          "Value": "Sun, 12 Oct 2025 10:03:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1589,7 +1858,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 19:43:49 GMT"
+          "Value": "Sun, 12 Oct 2025 10:03:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1634,7 +1903,7 @@
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 19:43:49 GMT"
+          "Value": "Sun, 12 Oct 2025 10:03:32 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1649,6 +1918,88 @@
       ]
     },
     {
+      "Route": "js/AuthenticationLayOut.261elt73c4.js",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\AuthenticationLayOut.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lgmXJZczkd+WoJ18GubVLcGZvT28wdUxd1UYOKw/gd0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 21:28:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "261elt73c4"
+        },
+        {
+          "Name": "label",
+          "Value": "js/AuthenticationLayOut.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-lgmXJZczkd+WoJ18GubVLcGZvT28wdUxd1UYOKw/gd0="
+        }
+      ]
+    },
+    {
+      "Route": "js/AuthenticationLayOut.js",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\AuthenticationLayOut.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1177"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"lgmXJZczkd+WoJ18GubVLcGZvT28wdUxd1UYOKw/gd0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Sat, 11 Oct 2025 21:28:54 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-lgmXJZczkd+WoJ18GubVLcGZvT28wdUxd1UYOKw/gd0="
+        }
+      ]
+    },
+    {
       "Route": "js/site.js",
       "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
       "Selectors": [],
@@ -1659,7 +2010,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3331"
+          "Value": "3585"
         },
         {
           "Name": "Content-Type",
@@ -1667,11 +2018,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OxtplTOOJuBJk7pJ2YTyIc0jv3fLiPksPQzYaOuENsc=\""
+          "Value": "\"Ii+eXid2YozYovJWY/IKi0rhPop42xkzPv3latLAY0I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 20:10:47 GMT"
+          "Value": "Tue, 07 Oct 2025 11:14:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1681,12 +2032,12 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-OxtplTOOJuBJk7pJ2YTyIc0jv3fLiPksPQzYaOuENsc="
+          "Value": "sha256-Ii+eXid2YozYovJWY/IKi0rhPop42xkzPv3latLAY0I="
         }
       ]
     },
     {
-      "Route": "js/site.vz7v96mwp4.js",
+      "Route": "js/site.qx28oe8a5t.js",
       "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\js\\site.js",
       "Selectors": [],
       "ResponseHeaders": [
@@ -1696,7 +2047,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "3331"
+          "Value": "3585"
         },
         {
           "Name": "Content-Type",
@@ -1704,11 +2055,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"OxtplTOOJuBJk7pJ2YTyIc0jv3fLiPksPQzYaOuENsc=\""
+          "Value": "\"Ii+eXid2YozYovJWY/IKi0rhPop42xkzPv3latLAY0I=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Mon, 29 Sep 2025 20:10:47 GMT"
+          "Value": "Tue, 07 Oct 2025 11:14:50 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -1718,7 +2069,7 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "vz7v96mwp4"
+          "Value": "qx28oe8a5t"
         },
         {
           "Name": "label",
@@ -1726,7 +2077,7 @@
         },
         {
           "Name": "integrity",
-          "Value": "sha256-OxtplTOOJuBJk7pJ2YTyIc0jv3fLiPksPQzYaOuENsc="
+          "Value": "sha256-Ii+eXid2YozYovJWY/IKi0rhPop42xkzPv3latLAY0I="
         }
       ]
     },
@@ -5417,6 +5768,170 @@
         {
           "Name": "integrity",
           "Value": "sha256-ZH6pA6BSx6fuHZvdaKph1DwUJ+VSYilIiEQu8ilnvqk="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/css/all.min.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\css\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Oct 2025 13:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/css/all.min.unrcvpaolo.css",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\css\\all.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "74320"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Oct 2025 13:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "unrcvpaolo"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fontawesome/css/all.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9sWQSWbvKc7NvB2NhyQKwP1ZVTLbZHUUPg4iCSTGiNA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/js/all.min.js",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\js\\all.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1501593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f0EjW9LhJ4qZoAJU+Vd5Cp9lIFKbrnrIebDBsGl0SQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Oct 2025 13:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-f0EjW9LhJ4qZoAJU+Vd5Cp9lIFKbrnrIebDBsGl0SQE="
+        }
+      ]
+    },
+    {
+      "Route": "lib/fontawesome/js/all.min.py2ybw1gba.js",
+      "AssetFile": "D:\\Backend Assignments\\TimeSheetAssesment\\TimeSheet\\wwwroot\\lib\\fontawesome\\js\\all.min.js",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1501593"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/javascript"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"f0EjW9LhJ4qZoAJU+Vd5Cp9lIFKbrnrIebDBsGl0SQE=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Thu, 02 Oct 2025 13:48:40 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "py2ybw1gba"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/fontawesome/js/all.min.js"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-f0EjW9LhJ4qZoAJU+Vd5Cp9lIFKbrnrIebDBsGl0SQE="
         }
       ]
     },
